@@ -5,7 +5,21 @@ This dataset was obtained via "Data Science Dojo" at https://code.datasciencedoj
 
 The data is provided in three parts (`datatest.csv`, `datatest2.csv`, `data training.csv`), which can be recombined to form the full data set. The combined dataset has 20560 rows and 7 columns. It includes one categoriacl variable, `Occupancy` which is the target variable for predictive models.
 
-### Repo Structure
+### Data Dictionary 
+The original data set contains the following variables
+| Atrribute Name 	| Description                                                                                           | Data Type    	| 
+|----------------	|------------------------------------------------------------------------------------------------------	|--------------	|
+| Date           	| Date and time of data collection (MM/DD/YYYY HH:MM)                                                  	| Object  	|
+| Temperature    	| Temperature in Celcius                                                                              	| float64 	| 
+| Humidity       	| Relative humidity (percent)                                                                         	| float64 	|
+| Light          	| Measure of light in Lux                                                                             	| float64 	|
+| CO2            	| CO2 measured in parts per million (ppm)                                                              	| float64 	|
+| HumidityRatio  	| Measure of kg of water vapor / kg air in room                                                        	| float64 	|
+| Occupancy      	| 1 if a room is occupied, 0 if a room is unoccupied                                                   	| int64 	|
+
+## Analysis
+
+### File Structure
     .
     ├── data                            # folder containing the datasets
     │   ├── processed                   # data that has been processed
@@ -35,20 +49,3 @@ The data is provided in three parts (`datatest.csv`, `datatest2.csv`, `data trai
     ├── main.py                         # entrance to the script
     ├── README.md
     └── requirements.txt
-
-### Data Dictionary 
-The original data set contains the following variables
-| Atrribute Name 	| Description                                                                                           | Data Type    	| 
-|----------------	|------------------------------------------------------------------------------------------------------	|--------------	|
-| Date           	| Date and time of data collection (MM/DD/YYYY HH:MM)                                                  	| Object  	|
-| Temperature    	| Temperature in Celcius                                                                              	| float64 	| 
-| Humidity       	| Relative humidity (percent)                                                                         	| float64 	|
-| Light          	| Measure of light in Lux                                                                             	| float64 	|
-| CO2            	| CO2 measured in parts per million (ppm)                                                              	| float64 	|
-| HumidityRatio  	| Measure of kg of water vapor / kg air in room                                                        	| float64 	|
-| Occupancy      	| 1 if a room is occupied, 0 if a room is unoccupied                                                   	| int64 	|
-
-## Analysis
-
-### File Structure
-***ADD FILE STRUCTURE HERE AND HOW THEY ARE CONNECTED/WHAT TO RUN***
