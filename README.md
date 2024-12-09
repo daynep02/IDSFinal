@@ -25,6 +25,37 @@ The Following data dictionary gives more details on this data set:
 
 ---
 
+### Repo Structure
+    .
+    ├── data                            # folder containing the datasets
+    │   ├── processed                   # data that has been processed
+    |   |   └──  full_dataset.csv       # the full dataset that has been preprocessed
+    │   ├── raw                         # folder containing unprocessed and unmerged datasets
+    |   |   ├── datatest.csv
+    |   |   ├── datatest2.csv
+    |   |   └──  datatraining.csv
+    ├── notebooks 
+    │   └── occupancyDetection.ipynb    # exploratory notebook
+    ├── src 
+    │   ├── data
+    |   |   ├── load_data.py            # contains functions that load the data
+    │   |   └── preprocess.py           # contains functions to preprocess the data, including merging
+    │   ├── features
+    │   |   └── build_features.py       # builds the featureset to test on
+    │   ├── models
+    |   |   ├── train_models.py         # creates and trains the KNN, Gaussian NB, and DecisionTree models
+    │   |   └── validate_models.py      # validates the models
+    │   ├── utils
+    │   |   └── utils.py                # contains a function for printing metrics to the console
+    │   ├── visualization
+    │   |   └── visualization.py        # contains functions used to visualize the models
+    ├── tests 
+    │   └── tests.py                    # finalizes the best model and tests it on the testing data
+    ├── .gitignore 
+    ├── main.py                         # entrance to the script
+    ├── README.md
+    └── requirements.txt
+
 ### Data Dictionary 
 
 | Column   Position 	| Atrribute Name 	| Definition                                                                                           	| Data Type    	| Example                                        	| % Null Ratios 	|
