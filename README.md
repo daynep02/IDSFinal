@@ -17,9 +17,12 @@ The original data set contains the following variables
 | HumidityRatio  	| Measure of kg of water vapor / kg air in room                                                        	| float64 	|
 | Occupancy      	| 1 if a room is occupied, 0 if a room is unoccupied                                                   	| int64 	|
 
-## Analysis
+# Project
 
-### File Structure
+This repository contains the necessary files to preprocess, explore, and analyze the provided dataset, as well as analyze the effectiveness of various machine learning models for predicting the `Occupancy` variable given `Date`, `Temperature`, `Humididty`, `Light`, `CO2`, and `HumidityRatio`.
+The structure of the files for this project is as follows:
+
+## File Structure
     .
     ├── data                            # folder containing the datasets
     │   ├── processed                   # data that has been processed
@@ -48,4 +51,7 @@ The original data set contains the following variables
     ├── .gitignore 
     ├── main.py                         # entrance to the script
     ├── README.md
-    └── requirements.txt
+    └── requirements.txt                # lists project dependencies
+
+## Analysis
+This analysis works to choose the "best" machine learning model out of three: Decision Trees, Gaussian Naive Bayes, and K-Nearest Neighbors. It utilizes a 70-20-10 split for training, testing, and validation datasets respectively. The resulting "best" model, after all three models are compared on the same validation set (and using metrics such as accuracy, f1-score, precision, recall, and AUC) is discovered as K-Nearest Neighbors. The final results take on predicting the `Occupancy` values for the test set using the optimal KNN model, and provide one final set of evaluation metrics.
